@@ -1,0 +1,44 @@
+{
+  "beginner": [
+    {
+      "word": "happy",
+      "zipf": 3.2,
+      "partOfSpeech": "adjective",
+      "tag": "JJ"
+    },
+    {
+      "word": "run",
+      "zipf": 2.9,
+      "partOfSpeech": "verb",
+      "tag": "VB"
+    }
+  ],
+  "intermediate": [
+    {
+      "word": "relieve",
+      "zipf": 2.1,
+      "partOfSpeech": "verb",
+      "tag": "VB"
+    },
+    {
+      "word": "gather",
+      "zipf": 2.3,
+      "partOfSpeech": "verb",
+      "tag": "VB"
+    }
+  ],
+  "advanced": [
+    {
+      "word": "obfuscate",
+      "zipf": 1.6,
+      "partOfSpeech": "verb",
+      "tag": "VB"
+    },
+    {
+      "word": "conflate",
+      "zipf": 1.7,
+      "partOfSpeech": "verb",
+      "tag": "VB"
+    }
+  ]
+}

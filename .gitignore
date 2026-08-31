@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+dist/
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+.gitlab-ci.yml
+vocabuilder/src/firebase_upload/serviceAccountKey.json

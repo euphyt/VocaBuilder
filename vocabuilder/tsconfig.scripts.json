@@ -1,0 +1,14 @@
+// tsconfig.scripts.json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "strict": true
+  },
+  "include": ["src/scripts"]
+}

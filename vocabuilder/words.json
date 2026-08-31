@@ -1,0 +1,32 @@
+{
+  "beginner": [
+    {
+      "word": "happy",
+      "partOfSpeech": "adjective",
+      "definition": "Feeling or showing pleasure.",
+      "sentence": "She was happy with her results.",
+      "synonyms": ["joyful", "content"],
+      "antonyms": ["sad", "unhappy"]
+    }
+  ],
+  "intermediate": [
+    {
+      "word": "relieve",
+      "partOfSpeech": "verb",
+      "definition": "To ease pain or discomfort.",
+      "sentence": "The medicine will relieve your headache.",
+      "synonyms": ["ease", "alleviate"],
+      "antonyms": ["intensify", "worsen"]
+    }
+  ],
+  "advanced": [
+    {
+      "word": "obfuscate",
+      "partOfSpeech": "verb",
+      "definition": "To make something unclear or unintelligible.",
+      "sentence": "The report obfuscated the real issue.",
+      "synonyms": ["confuse", "blur"],
+      "antonyms": ["clarify", "illuminate"]
+    }
+  ]
+}

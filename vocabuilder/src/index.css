@@ -1,0 +1,22 @@
+﻿/* Tailwind v4 */
+@import "tailwindcss";
+
+/* Color tokens to match your design */
+:root {
+  --bg-beige: #d4c3a9;
+  --sand: #d4c9bc;
+  --tan: #d2a978;
+  --espresso: #3d2817;
+  --mint: #5fb07e;
+  --midnight: #1e3a5f;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--bg-beige);
+  color: var(--espresso);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

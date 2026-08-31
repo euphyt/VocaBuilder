@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() { return request.auth != null; }
+
+    // optional public words
+    match /words/{wordId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Per-user data
+    match /users/{uid} {
+      // owner can access their subtree
+      allow read, write: if isSignedIn() && request.auth.uid == uid;
+
+      // History
+      match /history/{hid} {
+        allow read, list: if isSignedIn() && request.auth.uid == uid;
+
+        // Minimal checks: allow create when there's at least a text string.
+        // (We won't restrict keys or createdAt, to allow serverTimestamp().)
+        allow create: if isSignedIn() && request.auth.uid == uid
+          && (request.resource.data.text is string);
+
+        // Only allow toggling isFavorite when updating an existing doc
+        allow update: if isSignedIn() && request.auth.uid == uid
+          && request.resource.data.diff(resource.data).changedKeys().hasOnly(['isFavorite']);
+
+        allow delete: if false;
+      }
+
+      // Favorites
+      match /favorites/{fid} {
+        allow read, list: if isSignedIn() && request.auth.uid == uid;
+
+        // Minimal checks: allow create if text is a string.
+        allow create: if isSignedIn() && request.auth.uid == uid
+          && (request.resource.data.text is string);
+
+        allow delete: if isSignedIn() && request.auth.uid == uid;
+        allow update: if false;
+      }
+    }
+  }
+}
